@@ -21,6 +21,12 @@ export const siteConfig = {
          route: '/criar_evento',
          icon: <Icons.bookmark width={30} />
       },
+      {
+         id: 4,
+         label: 'Calendario',
+         route: '/calendario',
+         icon: <Icons.calendar width={30} />
+      },
    ],
    categorys: [
       { name: 'Festa', icon: <Icons.media width={30} className='text-black' /> },

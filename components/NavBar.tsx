@@ -5,8 +5,8 @@ import Link from "next/link"
 
 const NavBar = () => {
    return (
-      <header className='fixed w-full h-20 py-2 bg-black z-10'>
-         <nav className='mr-60 h-full text-white flex items-center justify-between'>
+      <header className='w-full h-20 py-2 bg-[#30363db3] z-20 mb-4'>
+         <nav className='mr-4 h-full text-white flex items-center justify-between'>
             <div className='size-[2.9rem] rounded-full bg-[#141414] flex items-center justify-center'>
                <Link href='/search' aria-label='search icon'>
                   <Icons.search width={20} />

@@ -1,4 +1,4 @@
-import { MagnifyingGlassIcon, SunIcon, MoonIcon, HeartIcon, PlayIcon, BookmarkIcon, FaceSmileIcon, LockClosedIcon, CalendarIcon, CameraIcon, BookOpenIcon, CpuChipIcon, BuildingLibraryIcon, StarIcon, UserIcon, PencilSquareIcon, ChatBubbleBottomCenterIcon, BellIcon, ChevronRightIcon, PhotoIcon, UsersIcon, LinkIcon } from '@heroicons/react/24/solid'
+import { MagnifyingGlassIcon, SunIcon, PlusIcon, MoonIcon, HeartIcon, PlayIcon, BookmarkIcon, FaceSmileIcon, LockClosedIcon, CalendarIcon, CameraIcon, BookOpenIcon, CpuChipIcon, BuildingLibraryIcon, StarIcon, UserIcon, PencilSquareIcon, ChatBubbleBottomCenterIcon, BellIcon, ChevronRightIcon, PhotoIcon, UsersIcon, LinkIcon } from '@heroicons/react/24/solid'
 
 export const Icons = {
    userIcon: UserIcon,
@@ -22,5 +22,6 @@ export const Icons = {
    sadEmoji: FaceSmileIcon,
    play: PlayIcon,
    sun: SunIcon,
-   moon: MoonIcon
+   moon: MoonIcon,
+   plus: PlusIcon
 }

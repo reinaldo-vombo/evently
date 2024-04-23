@@ -17,7 +17,7 @@ const Gallery = () => {
          </div>
          <div className='grid gap-4 grid-cols-12'>
             {siteConfig.events.map((item) => (
-               <div className='col-span-3'>
+               <div className='col-span-3' key={item.id}>
                   {showVideo ? (
                      <div className='relative'>
                         <video src="/01.mp4" poster='/avatar.jpg' autoPlay={false} controls={false}></video>

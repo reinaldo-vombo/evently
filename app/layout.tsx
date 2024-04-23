@@ -19,20 +19,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#141414] h-screen flex justify-center`}>
-        <div className="flex flex-wrap w-full max-w-screen-2xl">
-          <div className="hidden md:block md:w-[13.666667%] bg-gray-200 relative">
+      <body className={`${inter.className} bg-[#0d1117] h-screen flex justify-center`}>
+        <div className="grid grid-cols-12">
+          <div className="hidden md:block col-span-2 relative">
             <Sidebar />
           </div>
-          <div className="w-full md:w-2/3">
+          <div className="w-full col-span-10">
             <NavBar />
-            <main className='text-white px-2 pt-[100px]'>
-              {children}
+            <main className='text-white px-4 grid grid-cols-12 gap-2'>
+              <div className='col-span-9'>
+                {children}
+              </div>
+              <div className='col-span-3'>
+                <RecentesEvents />
+              </div>
             </main>
           </div>
-          <div className="hidden md:block md:w-[19.666667%] relative">
-            <RecentesEvents />
-          </div>
+
         </div>
       </body>
     </html>

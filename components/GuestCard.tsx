@@ -5,7 +5,7 @@ import Image from 'next/image'
 const GuestCard = () => {
    return (
       <>
-         <div className='size-64'>
+         <div className='w-64 h-48'>
             <AspectRatio ratio={1 / 1} className="bg-muted relative rounded-md isolation-auto card-layout">
                <Image
                   src='/member4.jpg'

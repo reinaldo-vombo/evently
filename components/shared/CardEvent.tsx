@@ -5,52 +5,23 @@ import { Icons } from '@/config/icons'
 import Link from 'next/link'
 import { ICardEvent } from '@/interfaces'
 import { avatar } from '@/public'
-import { useState } from 'react'
-import Loader from '../Loader'
 
 const CardEvent = ({ image, title, id }: ICardEvent) => {
-   const [loadVideo, setLoadVideo] = useState(false)
-   const [video, setVideo] = useState('')
-   const [loading, setLoading] = useState(false);
-   let hoverTimer: NodeJS.Timeout | null = null;
-
-   const loadDemo = () => {
-      setLoading(true);
-      setTimeout(() => {
-         setVideo('/01.mp4');
-         setLoadVideo(true)
-         setLoading(false);
-      }, 2000);
-   }
-   const handleMouseEnter = () => {
-      hoverTimer = setTimeout(loadDemo, 2000); // Start the timer when mouse enters
-   };
-
-   const handleMouseLeave = () => {
-      if (hoverTimer) clearTimeout(hoverTimer);
-      hoverTimer = null;
-      setLoadVideo(false); // Ensure video is not loaded if mouse leaves
-   };
 
    return (
-      <div className='col-span-6 bg-black rounded-lg p-4 w-[25rem] flex items-center flex-col gap-6'>
-         <div className='relative w-full' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            {loadVideo === false ? (
-               <div className='relative h-72 w-full'>
-                  <Link href={`/eventos/${id}`} aria-label='event image' >
-                     <Image
-                        src={image}
-                        alt={title}
-                        fill={true}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover w-full "
-                     />
-                  </Link>
-               </div>
-            ) : (
-               <video src={video} className='w-full h-[27rem] rounded-lg' autoPlay={true}></video>
-            )}
-            {loading && <Loader />} {/* Display loading message if loading */}
+      <div className='col-span-6 bg-[#30363db3] rounded-lg p-4 flex items-center flex-col gap-6'>
+         <div className='relative w-full'>
+            <div className='relative h-72 w-full'>
+               <Link href={`/eventos/${id}`} aria-label='event image' >
+                  <Image
+                     src={image}
+                     alt={title}
+                     fill={true}
+                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                     className="object-cover w-full "
+                  />
+               </Link>
+            </div>
          </div>
          <div className='space-y-6 w-full'>
             <div className='w-full'>
