@@ -4,7 +4,7 @@ import Image from "next/image"
 
 const RecentesEvents = () => {
    return (
-      <div className='fixed right-2 bottom-0 top-0 w-[19.666667%] grid gap-5'>
+      <div className='fixed right-2 bottom-0 top-[93px] w-[19.666667%] grid gap-5'>
          <div className='bg-[#30363db3] rounded-md h-60'>
             <Image src={event4} className='w-full h-full rounded-md' width={240} height={240} alt='event' />
          </div>

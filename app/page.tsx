@@ -1,6 +1,5 @@
 import Filter from "@/components/Filter";
 import AllEvents from "@/components/layout/AllEvents";
-import RecentesEvents from "@/components/layout/RecentesEvents";
 import { Button } from "@/components/ui/button";
 import { event1 } from "@/public";
 import Image from "next/image";
@@ -9,7 +8,7 @@ export default function Home() {
   return (
     <>
       <div className='relative card-layout'>
-        <div className='relative h-56 w-full'>
+        <div className='relative h-[330px] w-full'>
           <Image src={event1} className='rounded-lg object-cover' fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt='banner image' />
         </div>
         <div className='text-left absolute left-0 top-0 p-[.9rem] z-10 space-y-3'>

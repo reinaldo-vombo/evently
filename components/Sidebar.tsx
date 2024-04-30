@@ -6,7 +6,7 @@ import React from 'react'
 
 const Sidebar = () => {
    return (
-      <aside className='fixed left-0 top-0 bottom-0 w-[16.666667%] z-50 text-white p-2 flex flex-col h-screen bg-[#30363db3]'>
+      <aside className='fixed left-0 top-0 bottom-0 w-[16.666667%] z-50 text-white p-2 flex flex-col h-screen bg-background'>
          <div className='grid mt-4'>
             <div className='flex items-center'>
                <Link href='/' className='flex items-center gap-2'>

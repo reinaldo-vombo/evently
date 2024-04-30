@@ -17,22 +17,12 @@ const config = {
         '2xl': '1400px',
       },
     },
-    // container: {
-    //   center: true,
-    //   padding: {
-    //     DEFAULT: '1rem',
-    //     sm: '2rem',
-    //     lg: '3rem',
-    //     xl: '4rem',
-    //     '2xl': '5rem',
-    //   },
-    // },
     extend: {
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
+        background: 'var(--background)',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',

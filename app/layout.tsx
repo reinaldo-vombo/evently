@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Sidebar from "@/components/Sidebar";
 import RecentesEvents from "@/components/layout/RecentesEvents";
+import Gradiente from "@/components/Gradiente";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#0d1117] h-screen flex justify-center`}>
+      <body className={`${inter.className} bg-background h-screen flex justify-center isolate`}>
         <div className="grid grid-cols-12">
           <div className="hidden md:block col-span-2 relative">
             <Sidebar />
@@ -27,16 +28,16 @@ export default function RootLayout({
           <div className="w-full col-span-10">
             <NavBar />
             <main className='text-white px-4 grid grid-cols-12 gap-2'>
-              <div className='col-span-9'>
+              <div className='col-span-12'>
                 {children}
               </div>
-              <div className='col-span-3'>
+              {/* <div className='col-span-3'>
                 <RecentesEvents />
-              </div>
+              </div> */}
             </main>
           </div>
-
         </div>
+        <Gradiente />
       </body>
     </html>
   );

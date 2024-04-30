@@ -82,7 +82,7 @@ export default function page({ params }: IPageParam) {
                         width='100%'
                         height='400px'
                      /> */}
-                     map
+
                   </div>
                </div>
             </div>

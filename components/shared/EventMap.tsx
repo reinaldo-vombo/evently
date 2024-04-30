@@ -14,6 +14,7 @@ interface IEventMap {
 }
 
 const EventMap = ({ classMame, height, width }: IEventMap) => {
+
    const [loading, setLoading] = useState(true);
    const [error, setError] = useState(false);
 
@@ -27,17 +28,19 @@ const EventMap = ({ classMame, height, width }: IEventMap) => {
       setError(true);
    };
    return (
-      <MapContainer className={classMame} center={position} zoom={13} scrollWheelZoom={false} style={{ height: height, width: width }} whenReady={handleError}>
-         <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-         />
-         <Marker position={position}>
-            <Popup>
-               A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-         </Marker>
-      </MapContainer>
+      <div className='w-48 h-80'>
+         <MapContainer className={classMame} center={position} zoom={13} scrollWheelZoom={false} style={{ height: '100px', width: '100%' }} whenReady={handleError}>
+            <TileLayer
+               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={position}>
+               <Popup>
+                  A pretty CSS3 popup. <br /> Easily customizable.
+               </Popup>
+            </Marker>
+         </MapContainer>
+      </div>
    )
 }
 
