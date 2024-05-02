@@ -14,8 +14,8 @@ const Filter = () => {
          <div className='flex items-center justify-center gap-6 my-12'>
             {siteConfig.categorys.map((item, index) => (
                <div className='flex items-center gap-2' key={index}>
-                  <button type='button' className={`rounded-lg ${selected === index ? 'bg-violet-500' : ''} p-1 flex items-center justify-center`} onClick={() => selectedItem(index)} aria-label='filer icon'>
-                     <span className='font-bold text-base'>{item.name}</span>
+                  <button type='button' className={`rounded-lg ${selected === index ? 'text-primary' : ''} p-1 flex items-center justify-center`} onClick={() => selectedItem(index)} aria-label='filer icon'>
+                     <span className={`font-bold text-base relative ${selected === index ? 'active-filter' : ''}`}>{item.name}</span>
                   </button>
                </div>
             ))}

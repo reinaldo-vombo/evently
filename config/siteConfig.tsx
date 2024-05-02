@@ -45,6 +45,7 @@ export const siteConfig = {
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam voluptate obcaecati atque iure iusto ea quae? Quibusdam dolor fugit inventore beatae quo. Sint neque nulla distinctio, consequatur facilis saepe?',
          owner: 'Reinado Vombo',
          image: event1,
+         images: [event3, event4],
          date: '15/03/2024',
       },
       {
@@ -53,6 +54,7 @@ export const siteConfig = {
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam voluptate obcaecati atque iure iusto ea quae? Quibusdam dolor fugit inventore beatae quo. Sint neque nulla distinctio, consequatur facilis saepe?',
          owner: 'Reinado Vombo',
          image: event2,
+         images: [event3, event4],
          date: '15/03/2024',
 
       },
@@ -61,6 +63,7 @@ export const siteConfig = {
          title: "Girl please tell me way",
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam voluptate obcaecati atque iure iusto ea quae? Quibusdam dolor fugit inventore beatae quo. Sint neque nulla distinctio, consequatur facilis saepe?',
          image: event3,
+         images: [event3, event4],
          date: '15/03/2024',
          owner: 'Reinado Vombo',
       },
@@ -69,6 +72,7 @@ export const siteConfig = {
          title: "TRAFIC, the world's largest wildlife trade",
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam voluptate obcaecati atque iure iusto ea quae? Quibusdam dolor fugit inventore beatae quo. Sint neque nulla distinctio, consequatur facilis saepe?',
          image: event4,
+         images: [event3, event4],
          owner: 'Reinado Vombo',
          date: '15/03/2024',
       },

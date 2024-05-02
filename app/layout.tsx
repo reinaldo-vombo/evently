@@ -20,14 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background h-screen flex justify-center isolate`}>
+      <body className={`${inter.className} bg-background relative h-screen isolate`}>
         <div className="grid grid-cols-12">
           <div className="hidden md:block col-span-2 relative">
             <Sidebar />
           </div>
           <div className="w-full col-span-10">
             <NavBar />
-            <main className='text-white px-4 grid grid-cols-12 gap-2'>
+            <main className='text-white px-4 grid grid-cols-12 gap-2 relative z-10'>
               <div className='col-span-12'>
                 {children}
               </div>
