@@ -25,7 +25,7 @@ export default function page({ params }: IPageParam) {
          <div className='relative h-48 w-full'>
             <Image src={event.image} className='rounded-lg object-cover' fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt={event.title} />
          </div>
-         <div className='space-y-4'>
+         <div className='space-y-4 text-secondary-foreground'>
             <h2 className='h2-bold'>{event.title}</h2>
             <div className='flex items-center justify-between'>
                <div className='flex flex-col gap-6'>
@@ -49,16 +49,16 @@ export default function page({ params }: IPageParam) {
                <div>
                   <div className='space-y-6'>
                      <div className='flex items-center gap-4'>
-                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-violet-500 hover:bg-violet-700' aria-label='shared button'>
-                           <Icons.plus className='text-white' width={20} />
+                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-primary hover:bg-primary-foreground' aria-label='shared button'>
+                           <Icons.calendar className='text-white' width={20} />
                         </button>
-                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-violet-500 hover:bg-violet-700' aria-label='shared button'>
+                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-primary hover:bg-primary-foreground' aria-label='shared button'>
                            <Icons.bookmark className='text-white' width={20} />
                         </button>
-                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-violet-500 hover:bg-violet-700' aria-label='shared button'>
+                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-primary hover:bg-primary-foreground' aria-label='shared button'>
                            <Icons.link className='text-white' width={20} />
                         </button>
-                        <Button type='button' className='bg-violet-500 rounded-md hover:bg-violet-700 flex gap-2' aria-label='buy ticket'>
+                        <Button type='button' className='bg-primary rounded-md hover:bg-primary-foreground text-white flex gap-2' aria-label='buy ticket'>
                            Ver bilhete
                         </Button>
                      </div>
@@ -77,12 +77,10 @@ export default function page({ params }: IPageParam) {
                </div>
                <div className='w-full space-y-2 text-white'>
                   <h3 className='h3-bold'>Visão do Mapa</h3>
-                  <div className='bg-[#30363db3] rounded-md h-32'>
-                     {/* <EventMap
-                        width='100%'
-                        height='400px'
-                     /> */}
-
+                  <div className='bg-[#30363db3] rounded-md h-60'>
+                     <div className='h-full relative'>
+                        <EventMap />
+                     </div>
                   </div>
                </div>
             </div>

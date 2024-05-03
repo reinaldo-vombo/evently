@@ -5,14 +5,13 @@ import { Icons } from '@/config/icons'
 import Link from 'next/link'
 import { ICardEvent } from '@/interfaces'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
-import { Button } from '../ui/button'
 
 const CardEvent = ({ image, title, id }: ICardEvent) => {
 
    return (
       <div className='col-span-4'>
          <div className='relative w-full'>
-            <div className='relative h-96 w-full card-layout'>
+            <div className='relative h-96 w-full card-layout rounded-lg'>
                <Link href={`/eventos/${id}`} aria-label='event image' >
                   <Image
                      src={image}
@@ -28,17 +27,21 @@ const CardEvent = ({ image, title, id }: ICardEvent) => {
                   </button>
                   <div className='space-y-5'>
                      <Link href={`/eventos/${id}`} aria-label='event image' >
-                        <h2 className='h3-bold'>{title}</h2>
+                        <h2 className='text-xl font-semibold leading-[140%] tracking-tighter'>{title}</h2>
                      </Link>
                      <div className='flex items-center justify-between'>
                         <div className='flex items-center gap-3'>
-                           <Avatar>
+                           <Avatar className='border-2 border-primary'>
                               <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
                               <AvatarFallback>CN</AvatarFallback>
                            </Avatar>
                            <span>Reinaldo Vombo</span>
                         </div>
-                        <Button type='button' className='bg-primary py-1'>Participar</Button>
+                        <span className='bg-primary p-1 rounded-md'>Privado</span>
+                     </div>
+                     <div className='flex items-center gap-1'>
+                        <Icons.calendar width={20} />
+                        <span>Sabado, 16 Oct 2024</span>
                      </div>
                   </div>
                </div>
