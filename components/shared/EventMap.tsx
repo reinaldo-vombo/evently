@@ -1,7 +1,7 @@
 'use client'
 import { LatLngExpression } from 'leaflet'
 import { useState } from 'react'
-import { Marker, Popup, useMapEvents } from 'react-leaflet'
+import { Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { MapContainer } from 'react-leaflet/MapContainer'
 import { TileLayer } from 'react-leaflet/TileLayer'

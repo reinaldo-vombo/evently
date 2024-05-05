@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import { Icons } from '@/config/icons'
 import Link from 'next/link'
-import { ICardEvent } from '@/interfaces'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import { ICardEvent } from '@/interfaces/event'
 
 const CardEvent = ({ image, title, id }: ICardEvent) => {
 

@@ -1,9 +1,9 @@
 
+import MediaPreview from "@/components/MediaPreview";
+import ButtonsAction from "@/components/event/ButtonsAction";
+import ExpandleCard from "@/components/event/ExpandleCard";
 import Gallery from "@/components/layout/Gallery";
 import EventMap from "@/components/shared/EventMap";
-import EventSlider from "@/components/shared/EventSlider";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Button } from "@/components/ui/button";
 import { Icons } from "@/config/icons";
 import { siteConfig } from "@/config/siteConfig";
 import Image from "next/image";
@@ -21,7 +21,7 @@ export default function page({ params }: IPageParam) {
       return <h1>no events</h1>
    }
    return (
-      <section className='space-y-5'>
+      <section className='space-y-10'>
          <div className='relative h-48 w-full'>
             <Image src={event.image} className='rounded-lg object-cover' fill={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt={event.title} />
          </div>
@@ -46,27 +46,12 @@ export default function page({ params }: IPageParam) {
                      {shouldRenderButton && <a className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800" href="#">+99</a>}
                   </div>
                </div>
-               <div>
-                  <div className='space-y-6'>
-                     <div className='flex items-center gap-4'>
-                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-primary hover:bg-primary-foreground' aria-label='shared button'>
-                           <Icons.calendar className='text-white' width={20} />
-                        </button>
-                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-primary hover:bg-primary-foreground' aria-label='shared button'>
-                           <Icons.bookmark className='text-white' width={20} />
-                        </button>
-                        <button type='button' className='rounded-full size-10 flex items-center justify-center bg-primary hover:bg-primary-foreground' aria-label='shared button'>
-                           <Icons.link className='text-white' width={20} />
-                        </button>
-                        <Button type='button' className='bg-primary rounded-md hover:bg-primary-foreground text-white flex gap-2' aria-label='buy ticket'>
-                           Ver bilhete
-                        </Button>
-                     </div>
-                     <div className='flex items-center gap-2'>
-                        <Image src='/avatar.jpg' className='rounded-full size-10' width={460} height={460} alt='user avatar' />
-                        <span className='text-slate-500'>Organizado por</span>
-                        <b>Reinaldo Vombo</b>
-                     </div>
+               <div className='space-y-6'>
+                  <ButtonsAction />
+                  <div className='flex items-center gap-2'>
+                     <Image src='/avatar.jpg' className='rounded-full size-10' width={460} height={460} alt='user avatar' />
+                     <span className='text-slate-500'>Organizado por</span>
+                     <b>Reinaldo Vombo</b>
                   </div>
                </div>
             </div>
@@ -84,17 +69,24 @@ export default function page({ params }: IPageParam) {
                   </div>
                </div>
             </div>
-            <div>
+            <div className='space-y-4'>
                <h3 className='h3-bold'>Convidados</h3>
                <div className='flex items-center justify-center'>
-                  <EventSlider
-                     events={siteConfig.events}
-                     showGuest={true}
-                     width="w-[71%]"
-                  />
+                  {event.guests.map((guest, index) => (
+                     <ExpandleCard
+                        key={index}
+                        index={index}
+                        photo={guest.photo}
+                        name={guest.name}
+                     />
+                  ))}
                </div>
             </div>
-            <Gallery />
+            <MediaPreview
+               event={event.guests}
+               previewWithDescription={false}
+               title={event.title}
+            />
             {/* <div className='space-y-5'>
                <h2 className='h3-bold'>Eventos Relacionados</h2>
                <div className='flex items-center justify-center'>

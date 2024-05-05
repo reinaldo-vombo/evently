@@ -2,8 +2,6 @@ import Filter from "@/components/Filter";
 import IncomeEvent from "@/components/IncomeEvent";
 import AllEvents from "@/components/layout/AllEvents";
 import { Button } from "@/components/ui/button";
-import { event1 } from "@/public";
-import Image from "next/image";
 
 export default function Home() {
   return (

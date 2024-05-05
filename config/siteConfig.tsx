@@ -1,6 +1,25 @@
-import { event1, event2, event3, event4 } from "@/public";
+import { event1, event2, event3, event4, member1, member2, member3 } from "@/public";
 import { Icons } from "./icons";
-
+const guests = [
+   {
+      _id: '13bsnasdsgsdgfn5',
+      name: 'Carlos Luiz',
+      photo: member1,
+      role: 'speaker'
+   },
+   {
+      _id: '13bsndfdgsdsdfn2',
+      name: 'Carlos Luiz',
+      photo: member2,
+      role: 'speaker'
+   },
+   {
+      _id: '13bsnasfddsf112n',
+      name: 'Carlos Luiz',
+      photo: member3,
+      role: 'speaker'
+   },
+]
 export const siteConfig = {
    menus: [
       {
@@ -46,6 +65,7 @@ export const siteConfig = {
          owner: 'Reinado Vombo',
          image: event1,
          images: [event3, event4],
+         guests: guests,
          date: '15/03/2024',
       },
       {
@@ -55,6 +75,7 @@ export const siteConfig = {
          owner: 'Reinado Vombo',
          image: event2,
          images: [event3, event4],
+         guests: guests,
          date: '15/03/2024',
 
       },
@@ -64,6 +85,7 @@ export const siteConfig = {
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam voluptate obcaecati atque iure iusto ea quae? Quibusdam dolor fugit inventore beatae quo. Sint neque nulla distinctio, consequatur facilis saepe?',
          image: event3,
          images: [event3, event4],
+         guests: guests,
          date: '15/03/2024',
          owner: 'Reinado Vombo',
       },
@@ -73,6 +95,7 @@ export const siteConfig = {
          description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsam voluptate obcaecati atque iure iusto ea quae? Quibusdam dolor fugit inventore beatae quo. Sint neque nulla distinctio, consequatur facilis saepe?',
          image: event4,
          images: [event3, event4],
+         guests: guests,
          owner: 'Reinado Vombo',
          date: '15/03/2024',
       },
