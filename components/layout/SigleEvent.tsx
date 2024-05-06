@@ -1,4 +1,4 @@
-import EventMap from "../shared/EventMap"
+import EventMap from "../event/EventMap"
 
 const SigleEvent = () => {
    return (

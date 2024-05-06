@@ -2,8 +2,7 @@
 import MediaPreview from "@/components/MediaPreview";
 import ButtonsAction from "@/components/event/ButtonsAction";
 import ExpandleCard from "@/components/event/ExpandleCard";
-import Gallery from "@/components/layout/Gallery";
-import EventMap from "@/components/shared/EventMap";
+import EventMap from "@/components/event/EventMap";
 import { Icons } from "@/config/icons";
 import { siteConfig } from "@/config/siteConfig";
 import Image from "next/image";

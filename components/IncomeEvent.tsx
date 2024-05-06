@@ -32,8 +32,8 @@ const IncomeEvent = () => {
                   <h2 className='base-semibold mt-5'>Big consert music event after a long time not held with a popular band</h2>
                   <p className='text-sm'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel rem nisi corporis repellendus doloribus quas ipsa dolore optio rerum! Dolore facilis debitis maxime tenetur magnam minima nobis illum error soluta!</p>
                   <div className='flex items-center justify-between'>
-                     <Button>Participar</Button>
-                     <Button>
+                     <Button className='text-white'>Participar</Button>
+                     <Button className='text-white'>
                         <Icons.link width={20} />
                      </Button>
                   </div>
